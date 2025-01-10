@@ -5,11 +5,13 @@ const ListCourses = () => {
     return(
         <>
         <h1>Courses Name</h1>
-        <ul>
-            {courses.map((courses, index) =>(
-                <li key={index}>{courses}</li>
+          
+            {courses.map((courses) =>(
+                <ul>
+                    <li>{courses}</li>
+                </ul>
             ))}
-        </ul>
+            
         </>
     )
 }

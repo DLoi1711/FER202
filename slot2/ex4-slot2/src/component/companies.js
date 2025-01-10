@@ -21,8 +21,9 @@ const Companies = () => {
       start: company.start + 1,
     }));
 
-  const sortAges = ages.sort((a, b) => b - a);
-  const totalAges = ages.reduce((Sum, age) => Sum + age, 0);
+const sortAges = ages.sort((a, b) => b - a);
+const totalAges = ages.reduce((Sum, age) => Sum + age, 0);
+const sortbyEnddate = companies.sort((a, b) => b.end - a.end);
 
   return (
     <div>
@@ -30,12 +31,12 @@ const Companies = () => {
         {companies.map((company, index) => (
           <li key={index}>{company.name}</li>
         ))}
-
-      <h1>Danh Sách Công Ty Sau 1987</h1>
-        {companiesAfter1987.map((company, index) => (
-          <li key={index}>{company.name}</li>
+{/* ////////////////////////////////////////////////////// */}
+      <h1>Danh Sách Công Ty Sau Năm 1987</h1>
+        {companiesAfter1987.map((company) => (
+          <li>{company.name}</li>
         ))}
-
+{/* /////////////////////////////////////////////////////// */}
       <h1>Retail Companies</h1>
       <table border={1}>
       <thead>
@@ -47,8 +48,8 @@ const Companies = () => {
         </tr>
       </thead>
       <tbody>
-        {retailCompanies.map((company, index) => (
-          <tr key={index}>
+        {retailCompanies.map((company) => (
+          <tr>
             <td>{company.name}</td>
             <td>{company.category}</td>
             <td>{company.start}</td>
@@ -57,12 +58,17 @@ const Companies = () => {
         ))}
       </tbody>
     </table>
-
+{/* ////////////////////////////////////////////////////////// */}
+    <h1>Companies Sort by End Date</h1>
+    {sortbyEnddate.map((companies) => (
+      <li>{companies.name} (End: {companies.end})</li>
+    ))}
+{/* ////////////////////////////////////////////////////////// */}
     <h1>Sorted Ages</h1>
-        {sortAges.map((age, index) => (
-          <li key={index}>{age}</li>
+        {sortAges.map((age) => (
+          <li>{age}</li>
         ))}
-        
+{/* ///////////////////////////////////////////////////////// */}
     <h1>Tổng số tuổi</h1>
       <p>{totalAges}</p>
 
