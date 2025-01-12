@@ -1,3 +1,4 @@
+
 const companies = [
   { name: "Company One", category: "Finance", start: 1981, end: 2004 },
   { name: "Company Two", category: "Retail", start: 1992, end: 2008 },
@@ -11,6 +12,7 @@ const companies = [
 ];
 
 const ages = [33, 12, 20, 16, 5, 54, 21, 44, 61, 13, 15, 45, 25, 64, 32];
+const sumAll = (...numbers) => numbers.reduce((sum, number) => sum + number, 0);
 
 const Companies = () => {
   const companiesAfter1987 = companies.filter(company => company.start > 1987);
@@ -21,9 +23,11 @@ const Companies = () => {
       start: company.start + 1,
     }));
 
+const {name} = companies[0]
 const sortAges = ages.sort((a, b) => b - a);
 const totalAges = ages.reduce((Sum, age) => Sum + age, 0);
 const sortbyEnddate = companies.sort((a, b) => b.end - a.end);
+const randomSum = sumAll(1, 2, 3, 4, 5);
 
   return (
     <div>
@@ -72,7 +76,13 @@ const sortbyEnddate = companies.sort((a, b) => b.end - a.end);
     <h1>Tổng số tuổi</h1>
       <p>{totalAges}</p>
 
+    <h1>New Object</h1>
+    Name: {name}
+
+    <h1>Random Sum</h1> 
+    <p>{randomSum}</p>
     </div>
+    
   );
 };
 

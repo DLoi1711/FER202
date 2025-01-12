@@ -7,11 +7,8 @@ const ListCourses = () => {
         <h1>Courses Name</h1>
           
             {courses.map((courses) =>(
-                <ul>
-                    <li>{courses}</li>
-                </ul>
+                {courses}
             ))}
-            
         </>
     )
 }
