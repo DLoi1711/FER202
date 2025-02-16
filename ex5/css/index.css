@@ -1,0 +1,35 @@
+.bg-orange {
+    background-color: #ea8f2e;
+}
+
+.text-orange{
+    color: #ea8f2e;
+}
+
+.bg-f2ca81 {
+    background-color: #f2ca81;
+}
+
+.bg-eacdad{
+    background-color: #eacdad;
+}
+
+.fpt-logo{
+    width: 250px;
+    height: 100%;
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+}
+
+.home-student{
+    background-color: rgb(230, 230, 235);
+    width: 200px;
+}
+
+.icon-second{
+    width: 40px;
+    height: 40px;
+}
