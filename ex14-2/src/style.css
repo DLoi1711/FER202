@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  .App {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  input {
+    padding: 8px;
+    margin-right: 10px;
+    width: 200px;
+  }
+  
+  button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .dishes {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  
+  .dish-item {
+    flex: 0 0 auto; 
+    width: 250px;
+    text-align: center;
+  }
+  
+  .dish-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  
+  .cart {
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 2px solid #ccc;
+  }
+  
+  .cart ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cart li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .success-msg {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .dark-mode .dish-item {
+    background-color: #333;
+    color: white;
+  }
+  
+  .dark-mode .btn {
+    background-color: #ff9800;
+    border: none;
+  }
+  
+  .dark-mode .btn:hover {
+    background-color: #e68900;
+  }
+  
